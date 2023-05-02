@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Logic
+  m_EditorClassIdentifier: 
+  m_GroupName: Logic
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c3b986af90a2c1c40b9b04a5a34715ea
+  m_SerializeEntries:
+  - m_GUID: 31f1dabd1734f39439ed38b1b878ba19
+    m_Address: UIRoot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 853ba11554c9f364d96ebeb00fc95f97
+    m_Address: OpenCharacteristicsButton_Canvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fa79a28b97d81204492af090e9d02c3a
+    m_Address: OpenInventoryButton_Canvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 139a3bf3f03b35441aca4aa858a4f9a8
+    m_Address: PlayerInteractionInPieceButton_Canvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 69c4e04fb5ebdca42a9e7b8175605bc5
+    m_Address: GamePlayMessageWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9948c1c9abd2a5446bc33e2e0a36d415
+    m_Address: GamePlayMessage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d985680fe88510a4b85173b35ce24ad0
+    m_Address: ItemSpawnPoint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: acc36e4f0fdc2cb4197138715bd8fc4a
+    m_Address: GlobalAudioPlayer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8147cac0b4b9f3a4592160952c401a7c
+    m_Address: UIWorldSpaceHealth
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 267bcea04d42b4a409c3ff2e44fa30b8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 931a1fc5591a66347b19467c4bcbd779, type: 2}
+    - {fileID: 11400000, guid: f2f121047ba7ede4490173695f268902, type: 2}

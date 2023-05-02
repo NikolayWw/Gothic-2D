@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30da1d95840c440c918bdc51e4fd661e, type: 3}
+  m_Name: NpcContainerStaticData
+  m_EditorClassIdentifier: 
+  <Configs>k__BackingField:
+  - _name: Cavalorn
+    <Id>k__BackingField: 1
+    <TemplateReference>k__BackingField:
+      m_AssetGUID: d50ba40e1e34e4c4da40488341a68ace
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    <MaxHealth>k__BackingField: 100
+    <CurrentHealth>k__BackingField: 51
+    <PatrolSpeed>k__BackingField: 3
+    <WalkingSpeed>k__BackingField: 4
+    <FollowSpeed>k__BackingField: 5
+  - _name: Lobart
+    <Id>k__BackingField: 2
+    <TemplateReference>k__BackingField:
+      m_AssetGUID: b960a7e56dc8457498818aedfecd9f9f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    <MaxHealth>k__BackingField: 100
+    <CurrentHealth>k__BackingField: 51
+    <PatrolSpeed>k__BackingField: 3
+    <WalkingSpeed>k__BackingField: 4
+    <FollowSpeed>k__BackingField: 5
+  - _name: Hildia
+    <Id>k__BackingField: 3
+    <TemplateReference>k__BackingField:
+      m_AssetGUID: 8aeb4b907d3c25147be2a1c117c90827
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    <MaxHealth>k__BackingField: 100
+    <CurrentHealth>k__BackingField: 51
+    <PatrolSpeed>k__BackingField: 3
+    <WalkingSpeed>k__BackingField: 4
+    <FollowSpeed>k__BackingField: 5
+  - _name: Cantar
+    <Id>k__BackingField: 4
+    <TemplateReference>k__BackingField:
+      m_AssetGUID: 883e2929088da7049bff77dc7dfa0c06
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    <MaxHealth>k__BackingField: 100
+    <CurrentHealth>k__BackingField: 51
+    <PatrolSpeed>k__BackingField: 3
+    <WalkingSpeed>k__BackingField: 4
+    <FollowSpeed>k__BackingField: 5
+  - _name: Bandit_Cavalorn1
+    <Id>k__BackingField: 1000
+    <TemplateReference>k__BackingField:
+      m_AssetGUID: ea2946e0e2cbfa24e94b620917ce84b3
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    <MaxHealth>k__BackingField: 100
+    <CurrentHealth>k__BackingField: 51
+    <PatrolSpeed>k__BackingField: 3
+    <WalkingSpeed>k__BackingField: 4
+    <FollowSpeed>k__BackingField: 5
+  - _name: Bandit_Cavalorn2
+    <Id>k__BackingField: 1001
+    <TemplateReference>k__BackingField:
+      m_AssetGUID: ea2946e0e2cbfa24e94b620917ce84b3
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    <MaxHealth>k__BackingField: 100
+    <CurrentHealth>k__BackingField: 51
+    <PatrolSpeed>k__BackingField: 3
+    <WalkingSpeed>k__BackingField: 4
+    <FollowSpeed>k__BackingField: 5

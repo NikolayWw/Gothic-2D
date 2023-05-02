@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  m_GroupName: Items
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f752270d8896b78458dba427a6f0467e
+  m_SerializeEntries:
+  - m_GUID: 11a6b0174b02ee64986c6f5766dad3c1
+    m_Address: Gold
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d4b39f11f0f18464296e9ee692f18362
+    m_Address: MeleeWeapon_Sword_inPiece
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 50ba499b24b7e4942a3625f305ba4d47
+    m_Address: Bratpfanne
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7179c672dc868284688438d1bab93a3c
+    m_Address: HealingGrass
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3dc00804f0982bc49a038fee6de62c6c
+    m_Address: HealingPlant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c8c11e16c85999c48bc7b878df1a130b
+    m_Address: MeleeWeapon_Sword 2_inPiece
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b711848aad20fdd4baf539308964fc22
+    m_Address: Beet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d1b86073106dd5a4cb576f92817a04f1
+    m_Address: MeleeWeapon_Sword 2_iHand
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b5bb71e5d88a6a740bed4a0b8e1596aa
+    m_Address: MeleeWeapon_Sword_inHand
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 267bcea04d42b4a409c3ff2e44fa30b8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e1d909e8d624e0046bd1f537ffd8af64, type: 2}
+    - {fileID: 11400000, guid: faea517f146d8624885039d2dd1ac2cf, type: 2}

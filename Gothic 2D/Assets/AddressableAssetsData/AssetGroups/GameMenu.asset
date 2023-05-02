@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: GameMenu
+  m_EditorClassIdentifier: 
+  m_GroupName: GameMenu
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 522cee7c42f5a284fa82a0490c47e52a
+  m_SerializeEntries:
+  - m_GUID: ee10942282c303e4dbcd7fda02652499
+    m_Address: MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bff5d64b1620e56408935f1e59997f15
+    m_Address: LoadSaveMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 30a978cf747bd2d469e6ce636473232e
+    m_Address: SaveInfoDescription
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 19732cdb5ee791f47885bb5f937ba351
+    m_Address: LoadButton
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 46790e930cbc3134eb3db332a72fd99d
+    m_Address: OpenGameMenuButton_Canvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2f8b134c020c10240a8a09b90e3e7c29
+    m_Address: GameMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 267bcea04d42b4a409c3ff2e44fa30b8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d4360b45c5d89f940826d2be13c4794e, type: 2}
+    - {fileID: 11400000, guid: 03a310edd76a8be4dafa1ea6a57d8c46, type: 2}

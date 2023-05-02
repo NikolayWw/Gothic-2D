@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Npc
+  m_EditorClassIdentifier: 
+  m_GroupName: Npc
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ac5a3abb95e57df458f8c9319bce93f1
+  m_SerializeEntries:
+  - m_GUID: ea2946e0e2cbfa24e94b620917ce84b3
+    m_Address: Bandit
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6caefa5cdccaef047b4efa21466f7275
+    m_Address: BaseNpc
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 883e2929088da7049bff77dc7dfa0c06
+    m_Address: Cantar
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d50ba40e1e34e4c4da40488341a68ace
+    m_Address: Cavalorn
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8aeb4b907d3c25147be2a1c117c90827
+    m_Address: Hildia
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b960a7e56dc8457498818aedfecd9f9f
+    m_Address: Lobart
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d2d02b5f401ffa343976c6aa3a1c0854
+    m_Address: NpcSpawnPoint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 267bcea04d42b4a409c3ff2e44fa30b8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 589bab04cb75c604a970cc72d3ba4b72, type: 2}
+    - {fileID: 11400000, guid: c0ca889d59035824a8e4d79fc10405d7, type: 2}
