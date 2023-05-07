@@ -10,18 +10,18 @@ namespace CodeBase.Inventory
 {
     public class DragItemInSlot
     {
-        private readonly UIInventorySlotsContainer _playerContainer;
+        private readonly UIInventorySlotsContainer _uiSlotsContainer;
         private readonly InventorySlotsHandler _slotsHandler;
 
         private UIInventorySlotsContainer _boxContainer;
         private InventorySlotsContainer _previousInventory;
         private Slot _previousSlot;
 
-        public DragItemInSlot(UIInventorySlotsContainer playerContainer, ILogicFactoryService logicFactory)
+        public DragItemInSlot(UIInventorySlotsContainer uiSlotsContainer, ILogicFactoryService logicFactory)
         {
-            _playerContainer = playerContainer;
+            _uiSlotsContainer = uiSlotsContainer;
             _slotsHandler = logicFactory.InventorySlotsHandler;
-            _playerContainer.OnDownClick += DownClick;
+            _uiSlotsContainer.OnDownClick += DownClick;
         }
 
         public void AddBox(UIInventorySlotsContainer boxContainer)
@@ -32,8 +32,8 @@ namespace CodeBase.Inventory
 
         public void Clean()
         {
-            _playerContainer.OnDownClick -= DownClick;
-            _slotsHandler.DeselectSlots(_playerContainer.InventorySlotsContainer);
+            _uiSlotsContainer.OnDownClick -= DownClick;
+            _slotsHandler.DeselectSlots(_uiSlotsContainer.InventorySlotsContainer);
 
             if (_boxContainer)
             {
