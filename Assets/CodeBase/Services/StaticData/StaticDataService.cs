@@ -7,7 +7,7 @@ using CodeBase.StaticData.Items;
 using CodeBase.StaticData.Level;
 using CodeBase.StaticData.Npc;
 using CodeBase.StaticData.Player;
-using CodeBase.StaticData.SaveInfoPanel;
+using CodeBase.StaticData.SaveLoad;
 using CodeBase.StaticData.Windows;
 using CodeBase.UI.Services.Window;
 using System.Collections.Generic;
@@ -35,8 +35,6 @@ namespace CodeBase.Services.StaticData
         private const string GameplayMessageDataAddress = "GameplayMessageStaticData";
         private const string AdsStaticDataAddress = "AdsConfig";
 
-        private const string NpcSpeechAudioPath = "Npc/Speech/";
-
         #endregion Address
 
         public GameplayMessageStaticData GameplayMessageData { get; private set; }
@@ -45,12 +43,12 @@ namespace CodeBase.Services.StaticData
         public PlayerStaticData PlayerStaticData { get; private set; }
         public UILoadSaveStaticData UILoadSaveStaticData { get; private set; }
         public AdsConfig AdsStaticData { get; private set; }
-        private Dictionary<string, AudioClip> _npcSpeech;
         private Dictionary<AudioId, AudioConfig> _audioConfigs;
         private Dictionary<WindowId, WindowConfig> _windowConfigs;
         private Dictionary<string, LevelStaticData> _levelsData;
         private Dictionary<ItemId, BaseItem> _items;
         private Dictionary<NpcId, NpcConfig> _npcConfigs;
+        private Dictionary<DialogId, List<DialogContext>> _dialogConfigs;
         private List<AsyncOperationHandle> _handlesAddress = new List<AsyncOperationHandle>();
 
         public async Task Load()
@@ -72,12 +70,10 @@ namespace CodeBase.Services.StaticData
 
             InventoryConfig = await LoadAsync<InventoryConfig>(InventoryConfigAddress);
             PlayerStaticData = await LoadAsync<PlayerStaticData>(PlayerStaticDataAddress);
-            DialogStaticData = await LoadAsync<DialogStaticData>(DialogStaticDataAddress);
+            await LoadDialogData();
             GameplayMessageData = await LoadAsync<GameplayMessageStaticData>(GameplayMessageDataAddress);
             UILoadSaveStaticData = await LoadAsync<UILoadSaveStaticData>(LoadSaveDataAddress);
             AdsStaticData = await LoadAsync<AdsConfig>(AdsStaticDataAddress);
-
-            _npcSpeech = Resources.LoadAll<AudioClip>(NpcSpeechAudioPath).ToDictionary(x => x.name, x => x);
 
             CleanHandlesAddress();
         }
@@ -97,8 +93,14 @@ namespace CodeBase.Services.StaticData
         public BaseItem ForItem(ItemId id) =>
             _items.TryGetValue(id, out var item) ? item : null;
 
-        public AudioClip ForNpcSpeech(in string key) =>
-            _npcSpeech.TryGetValue(key, out var clip) ? clip : null;
+        public List<DialogContext> ForDialogContext(DialogId id) =>
+            _dialogConfigs.TryGetValue(id, out var contexts) ? contexts : null;
+
+        private async Task LoadDialogData()
+        {
+            DialogStaticData = await LoadAsync<DialogStaticData>(DialogStaticDataAddress);
+            _dialogConfigs = DialogStaticData.DialogConfigs.ToDictionary(x => x.DialogId, x => x.Contexts);
+        }
 
         private void LoadItems(ItemContainer container)
         {

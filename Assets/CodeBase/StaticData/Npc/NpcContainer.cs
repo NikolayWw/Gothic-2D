@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace CodeBase.StaticData.Npc
 {
-    [CreateAssetMenu(fileName = "New Npc Container", menuName = "Static Data/Npc Container", order = 0)]
+    [CreateAssetMenu(fileName = "New Npc Static Data", menuName = "Static Data/Npc Static Data", order = 0)]
     public class NpcContainer : ScriptableObject
     {
         [field: SerializeField] public List<NpcConfig> Configs { get; private set; }

@@ -1,5 +1,6 @@
 ﻿using CodeBase.Infrastructure.Logic;
 using CodeBase.Services.StaticData;
+using CodeBase.StaticData.Dialog;
 using CodeBase.UI.Services.Factory;
 using CodeBase.UI.Windows.Dialog.Logic;
 using System;
@@ -18,7 +19,7 @@ namespace CodeBase.UI.Windows.Dialog
         [SerializeField] private TMP_Text _dialogOutputText;
         [SerializeField] private DialogAudio _dialogAudio;
         public Action OnDialogWindowClosed;
-        private IStaticDataService _staticDataService;
+        private IStaticDataService _staticData;
 
         private DialogPlayer _dialogPlayer;
         private List<string> _npsKnows;
@@ -26,14 +27,14 @@ namespace CodeBase.UI.Windows.Dialog
         private List<Action> _infoInputButtons = new List<Action>();
         private readonly Dictionary<string, DialogButton> _inputButtons = new Dictionary<string, DialogButton>();
 
-        private readonly List<DialogData> _contextData = new List<DialogData>();
+        private readonly List<DialogId> _contextData = new List<DialogId>();
         private IUIFactory _uiFactory;
 
         public void Construct(IStaticDataService staticDataService, IUIFactory uiFactory)
         {
             _uiFactory = uiFactory;
-            _staticDataService = staticDataService;
-            _dialogPlayer = new DialogPlayer(this, this, _staticDataService, _dialogAudio);
+            _staticData = staticDataService;
+            _dialogPlayer = new DialogPlayer(this, this, _staticData, _dialogAudio);
         }
 
         private void Awake()
@@ -62,16 +63,11 @@ namespace CodeBase.UI.Windows.Dialog
             await CreateInput(EndDialog, "Exit", "Exit");
         }
 
-        public void AddContent(in DialogData data)
-        {
-            _contextData.Add(data);
-        }
-
-        public void Play(Action action)
+        public void Play(in DialogData dialogData)
         {
             HidInputWindow();
             ShowOutputWindow();
-            _dialogPlayer.Play(_contextData, Action);
+            _dialogPlayer.Play(in dialogData);
 
             void Action()
             {
@@ -82,9 +78,9 @@ namespace CodeBase.UI.Windows.Dialog
             }
         }
 
-        public async Task CreateInput(Action action, string buttonName, string npsKnows, bool clearAfterClick = true)
+        public async Task CreateInput(Action action, DialogId dialogId, string npsKnows, bool clearAfterClick = true)
         {
-            DialogButton button = await _uiFactory.CreateDialogButton(_inputWindow.transform, buttonName);
+            DialogButton button = await _uiFactory.CreateDialogButton(_inputWindow.transform, _staticData.DialogStaticData.DialogConfigs[1].Context);
             button.Button.onClick.AddListener(ActionAndNpsKnows);
 
             _inputButtons[buttonName] = button;

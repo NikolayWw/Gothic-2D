@@ -1,4 +1,6 @@
-﻿namespace CodeBase.Dialogs
+﻿using CodeBase.StaticData.Dialog;
+
+namespace CodeBase.Dialogs
 {
     public class CantarDialog : BaseDialog
     {
@@ -6,7 +8,7 @@
 
         protected override void AddButtons()
         {
-            InfoButtons.Add(TRADEInfo);
+            SpeechInfoButtons.Add(TRADEInfo);
         }
 
         private void TRADEInfo()
@@ -14,7 +16,7 @@
             if (TRADEInfoCondition() == false)
                 return;
 
-            CreateInput(TRADE, "Покажи мне свои товары!", "TRADEInfo");
+            CreateStartSpeechButton(TRADE, "Покажи мне свои товары!", "TRADEInfo");
         }
 
         private bool TRADEInfoCondition()
@@ -24,10 +26,7 @@
 
         private void TRADE()
         {
-            AddContext(true, "Покажи мне свои товары",
-                "DIA_Canthar_TRADE_15_00");
-            AddContext(false, "Выбирай.",
-                "DIA_Canthar_TRADE_09_01");
+            AddContext(DialogId.LogartPro, DialogId.LogartPro);
 
             void Action()
             {

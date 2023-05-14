@@ -6,6 +6,7 @@ using CodeBase.Services.GameFactory;
 using CodeBase.Services.LogicFactory;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.StaticData;
+using CodeBase.StaticData.Dialog;
 using CodeBase.StaticData.Items;
 using CodeBase.UI.Services.Factory;
 using CodeBase.UI.Services.Window;
@@ -20,15 +21,6 @@ namespace CodeBase.Dialogs
 {
     public abstract class BaseDialog : MonoBehaviour, ICoroutineRunner
     {
-        #region ExperianceConstants
-
-        protected const int XP_Ambient = 5;
-        protected const int XP_LobartHolRueben = 5;
-        protected const int XP_Addon_Cavalorn_KillBrago = 5;
-        protected const int XP_HildaHolPfanne = 5;
-
-        #endregion ExperianceConstants
-
         [field: SerializeField] protected OpenBox Shop { get; private set; }
         protected abstract string NpcName { get; set; }
         protected PlayerProgress PlayerProgress { get; private set; }
@@ -36,7 +28,7 @@ namespace CodeBase.Dialogs
         protected IStaticDataService DataService { get; private set; }
         protected InventorySlotsHandler SlotsHandler { get; private set; }
 
-        protected List<Action> InfoButtons { get; } = new List<Action>();
+        protected List<Action> SpeechInfoButtons { get; } = new List<Action>();
 
         private List<string> _dialogNpsKnows;
         private DialogBuilder _dialogBuilder;
@@ -44,6 +36,7 @@ namespace CodeBase.Dialogs
         private IWindowService _windowService;
         private bool _isInDialog;
         private CloseGameWindows _closeGameWindows;
+        private readonly List<DialogId> _addedSpeechIds = new List<DialogId>();
 
         public void Construct(IUIFactory uiFactory, NpcData npcData, IPersistentProgressService persistentProgressService, IGameFactory gameFactory, IStaticDataService dataService, IWindowService windowService, ILogicFactoryService logicFactory)
         {
@@ -74,7 +67,7 @@ namespace CodeBase.Dialogs
             AddButtons();
             _dialogBuilder = await _uiFactory.CreateDialogWindow();
             _dialogBuilder.OnDialogWindowClosed += Clean;
-            await _dialogBuilder.StartDialog(_dialogNpsKnows, InfoButtons);
+            await _dialogBuilder.StartDialog(_dialogNpsKnows, SpeechInfoButtons);
         }
 
         private void Clean()
@@ -111,29 +104,35 @@ namespace CodeBase.Dialogs
         protected void RemoveInputButton(string name) =>
             _dialogBuilder.RemoveButton(name);
 
-        /// <summary>
-        /// GG is a player
-        /// </summary>
-        /// <param name="isGGFocus"></param>
-        protected void AddContext(bool isGGFocus, string dialog, string audioName)
+        protected void AddContext(params DialogId[] speechIds)
         {
-            DialogData data = new DialogData(isGGFocus, NpcName, dialog, audioName);
-            _dialogBuilder.AddContent(in data);
+            foreach (var speechId in speechIds)
+            {
+                _addedSpeechIds.Add(speechId);
+            }
         }
 
         protected async void RestartDialogs() =>
             await _dialogBuilder.ReStartDialogs();
 
-        protected async void CreateInput(Action action, string buttonName, string npsKnows, bool clearAfterClick = true)
+        protected async void CreateStartSpeechButton(Action onStartDialog, DialogId dialogId, string npsKnows, bool clearAfterClick = true)
         {
-            await _dialogBuilder.CreateInput(action, buttonName, npsKnows, clearAfterClick);
+            await _dialogBuilder.CreateInput(OnStartDialog, dialogId, npsKnows, clearAfterClick);
+            void OnStartDialog()
+            {
+                _addedSpeechIds.Clear();
+                onStartDialog?.Invoke();
+            }
         }
 
         protected void ClearInputs() =>
             _dialogBuilder.ClearInputs();
 
-        protected void Play(Action action) =>
-            _dialogBuilder.Play(action);
+        protected void Play(Action onEndPlaySpeech)
+        {
+            DialogData data = new DialogData(NpcName, _addedSpeechIds, onEndPlaySpeech);
+            _dialogBuilder.Play(data);
+        }
 
         protected async void AddItem(ItemId id, int amount)
         {

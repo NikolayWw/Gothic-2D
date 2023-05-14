@@ -10,19 +10,19 @@ namespace CodeBase.Dialogs
 
         protected override void AddButtons()
         {
-            InfoButtons.Add(HALLOInfo);
-            InfoButtons.Add(WASMACHSTDUInfo);
-            InfoButtons.Add(HELFENInfo);
-            InfoButtons.Add(AUSRUESTUNGInfo);
-            InfoButtons.Add(BragoKilledInfo);
-            InfoButtons.Add(TeachInfo);
+            SpeechInfoButtons.Add(HALLOInfo);
+            SpeechInfoButtons.Add(WASMACHSTDUInfo);
+            SpeechInfoButtons.Add(HELFENInfo);
+            SpeechInfoButtons.Add(AUSRUESTUNGInfo);
+            SpeechInfoButtons.Add(BragoKilledInfo);
+            SpeechInfoButtons.Add(TeachInfo);
         }
 
         private void HALLOInfo()
         {
             if (HALLOInfoCondition() == false)
                 return;
-            CreateInput(HALLO, "У тебя проблемы?", "HALLOInfo");
+            CreateStartSpeechButton(HALLO, "У тебя проблемы?", "HALLOInfo");
         }
 
         private bool HALLOInfoCondition()
@@ -42,8 +42,8 @@ namespace CodeBase.Dialogs
             void Action()
             {
                 ClearInputs();
-                CreateInput(HALLO_Ja, "Тебя зовут Кавалорн, верно", "HALLO");
-                CreateInput(HALLO_weissNicht, "Что-то не припоминаю...", "HALLO");
+                CreateStartSpeechButton(HALLO_Ja, "Тебя зовут Кавалорн, верно", "HALLO");
+                CreateStartSpeechButton(HALLO_weissNicht, "Что-то не припоминаю...", "HALLO");
             }
             Play(Action);
         }
@@ -71,7 +71,7 @@ namespace CodeBase.Dialogs
             void Action()
             {
                 ClearInputs();
-                CreateInput(HALLO_Stadt, "В город.", "HALLO_Ja");
+                CreateStartSpeechButton(HALLO_Stadt, "В город.", "HALLO_Ja");
             }
             Play(Action);
         }
@@ -96,7 +96,7 @@ namespace CodeBase.Dialogs
             if (WASMACHSTDUInfoCondition() == false)
                 return;
 
-            CreateInput(WASMACHSTDU, "Что ты делаешь здесь?", "WASMACHSTDUInfo");
+            CreateStartSpeechButton(WASMACHSTDU, "Что ты делаешь здесь?", "WASMACHSTDUInfo");
         }
 
         private bool WASMACHSTDUInfoCondition()
@@ -120,7 +120,7 @@ namespace CodeBase.Dialogs
             if (HELFENInfoCondition() == false)
                 return;
 
-            CreateInput(HELFEN, "Могу я помочь тебе с бандитами", "HELFENInfo");
+            CreateStartSpeechButton(HELFEN, "Могу я помочь тебе с бандитами", "HELFENInfo");
         }
 
         private bool HELFENInfoCondition()
@@ -149,7 +149,7 @@ namespace CodeBase.Dialogs
         {
             if (AUSRUESTUNGInfoCondition() == false)
                 return;
-            CreateInput(AUSRUESTUNG, "Мне нужна экипировка получше.", "AUSRUESTUNGInfo");
+            CreateStartSpeechButton(AUSRUESTUNG, "Мне нужна экипировка получше.", "AUSRUESTUNGInfo");
         }
 
         private bool AUSRUESTUNGInfoCondition()
@@ -179,7 +179,7 @@ namespace CodeBase.Dialogs
         {
             if (BragoKilledInfoCondition() == false)
                 return;
-            CreateInput(BragoKilled, "С бандитами покончено.", "BragoKilledInfo");
+            CreateStartSpeechButton(BragoKilled, "С бандитами покончено.", "BragoKilledInfo");
         }
 
         private bool BragoKilledInfoCondition()
@@ -210,7 +210,7 @@ namespace CodeBase.Dialogs
         {
             if (TeachInfoCondition() == false)
                 return;
-            CreateInput(Teach, "Я хочу стать сильнее.", "TeachInfo");
+            CreateStartSpeechButton(Teach, "Я хочу стать сильнее.", "TeachInfo");
         }
 
         private bool TeachInfoCondition()
@@ -237,10 +237,10 @@ namespace CodeBase.Dialogs
             {
                 ClearInputs();
 
-                CreateInput(() => TryAddStrength(1, 1), "Увеличить на 1", "Teach", false);
-                CreateInput(() => TryAddStrength(5, 5), "Увеличить на 5", "Teach", false);
+                CreateStartSpeechButton(() => TryAddStrength(1, 1), "Увеличить на 1", "Teach", false);
+                CreateStartSpeechButton(() => TryAddStrength(5, 5), "Увеличить на 5", "Teach", false);
 
-                CreateInput(RestartDialogs, "Назад", "Teach");
+                CreateStartSpeechButton(RestartDialogs, "Назад", "Teach");
             }
             Play(Action);
         }
