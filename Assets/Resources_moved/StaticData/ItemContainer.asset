@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea200cfb05ce43bc809374d4a71312ed, type: 3}
-  m_Name: ItemsStaticData
+  m_Name: ItemContainer
   m_EditorClassIdentifier: 
   <None>k__BackingField:
     <InspectorName>k__BackingField: None

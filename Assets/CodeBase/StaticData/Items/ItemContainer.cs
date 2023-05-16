@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CodeBase.StaticData.Items
 {
-    [CreateAssetMenu(fileName = "New ItemStaticData", menuName = "Static Data/Inventory Slots Container/Item Static Data", order = 0)]
+    [CreateAssetMenu(fileName = "New ItemContainer", menuName = "Static Data/InventorySlotsContainer/ItemContainer", order = 0)]
     public class ItemContainer : ScriptableObject
     {
         [field: SerializeField] public None None { get; private set; }

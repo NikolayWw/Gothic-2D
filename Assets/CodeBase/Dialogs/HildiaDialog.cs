@@ -1,29 +1,19 @@
 ﻿using CodeBase.Data.PlayerProgress.Player.Quests;
-using CodeBase.StaticData.Dialog;
 using CodeBase.StaticData.Items;
 
 namespace CodeBase.Dialogs
 {
     public class HildiaDialog : BaseDialog
     {
-        #region ExperianceConstants
-
-        protected const int XP_Ambient = 5;
-        protected const int XP_LobartHolRueben = 5;
-        protected const int XP_Addon_Cavalorn_KillBrago = 5;
-        protected const int XP_HildaHolPfanne = 5;
-
-        #endregion ExperianceConstants
-
         protected override string NpcName { get; set; } = "Хилдия";
 
         protected override void AddButtons()
         {
-            SpeechInfoButtons.Add(HalloInfo);
-            SpeechInfoButtons.Add(WasZuEssenInfo);
-            SpeechInfoButtons.Add(BringBeetInfo);
-            SpeechInfoButtons.Add(EinkaufenInfo);
-            SpeechInfoButtons.Add(PfanneGeholtInfo);
+            InfoButtons.Add(HalloInfo);
+            InfoButtons.Add(WasZuEssenInfo);
+            InfoButtons.Add(BringBeetInfo);
+            InfoButtons.Add(EinkaufenInfo);
+            InfoButtons.Add(PfanneGeholtInfo);
         }
 
         private void HalloInfo()
@@ -31,7 +21,9 @@ namespace CodeBase.Dialogs
             if (HalloInfoCondition() == false)
                 return;
 
-            AddContext(DialogId.LogartPro);
+            AddContext(false,
+                "Эй, тебя сюда звали? Немедленно убирайся из моего дома. Здесь не подают милостыню",
+                "DIA_Hilda_Hallo_17_00");
 
             void Action()
             {
@@ -51,7 +43,7 @@ namespace CodeBase.Dialogs
             if (WasZuEssenInfoCondition() == false)
                 return;
 
-            CreateStartSpeechButton(WasZuEssen, DialogId.LogartPro, nameof(WasZuEssenInfo));
+            CreateInput(WasZuEssen, "Ты дашь мне что-нибудь поесть", "WasZuEssenInfo");
         }
 
         private bool WasZuEssenInfoCondition()
@@ -62,7 +54,9 @@ namespace CodeBase.Dialogs
 
         private void WasZuEssen()
         {
-            AddContext(DialogId.LogartPro);
+            AddContext(true,
+                "Ты дашь мне что-нибудь поесть?",
+                "DIA_Hilda_WasZuEssen_15_00");
 
             void Action()
             {
@@ -76,7 +70,7 @@ namespace CodeBase.Dialogs
             if (BringBeetCondition() == false)
                 return;
 
-            CreateStartSpeechButton(BringBeet, DialogId.LogartPro, nameof(BringBeetInfo));
+            CreateInput(BringBeet, "Я принес тебе репу...", "BringBeetInfo");
         }
 
         private bool BringBeetCondition()
@@ -111,7 +105,7 @@ namespace CodeBase.Dialogs
         {
             if (EinkaufenInfoCondition() == false)
                 return;
-            CreateStartSpeechButton(Einkaufen, DialogId.LogartPro, nameof(EinkaufenInfo));
+            CreateInput(Einkaufen, "Дай мне золота, и я схожу к этому торговцу для тебя...", "EinkaufenInfo");
         }
 
         private bool EinkaufenInfoCondition()
@@ -143,7 +137,7 @@ namespace CodeBase.Dialogs
             if (PfanneGeholtInfoCondition() == false)
                 return;
 
-            CreateStartSpeechButton(PfanneGeholt, DialogId.LogartPro, nameof(PfanneGeholtInfo));
+            CreateInput(PfanneGeholt, "Вот твоя сковородка.", "PfanneGeholtInfo");
         }
 
         private bool PfanneGeholtInfoCondition()

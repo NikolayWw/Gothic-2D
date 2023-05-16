@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace CodeBase.StaticData.SaveLoad
+namespace CodeBase.StaticData.SaveInfoPanel
 {
     [CreateAssetMenu(fileName = "New SaveLoadStaticData", menuName = "Static Data/UI Save Info Data", order = 0)]
     public class UILoadSaveStaticData : ScriptableObject

@@ -9,10 +9,10 @@ namespace CodeBase.Dialogs
 
         protected override void AddButtons()
         {
-            SpeechInfoButtons.Add(HalloInfo);
-            SpeechInfoButtons.Add(WorkNOWInfo);
-            SpeechInfoButtons.Add(RuebenRunningInfo);
-            SpeechInfoButtons.Add(MoreWorkInfo);
+            InfoButtons.Add(HalloInfo);
+            InfoButtons.Add(WorkNOWInfo);
+            InfoButtons.Add(RuebenRunningInfo);
+            InfoButtons.Add(MoreWorkInfo);
         }
 
         private void HalloInfo()
@@ -31,8 +31,8 @@ namespace CodeBase.Dialogs
             void Action()
             {
                 ClearInputs();
-                CreateStartSpeechButton(Hallo_ForTheKing, "Я за короля!", "HalloInfo");
-                CreateStartSpeechButton(Hallo_ForThePeasants, "Я с крестьянами!", "HalloInfo");
+                CreateInput(Hallo_ForTheKing, "Я за короля!", "HalloInfo");
+                CreateInput(Hallo_ForThePeasants, "Я с крестьянами!", "HalloInfo");
             }
 
             Play(Action);
@@ -77,7 +77,7 @@ namespace CodeBase.Dialogs
             if (WorkNOWInfoCondition() == false)
                 return;
 
-            CreateStartSpeechButton(WorkNOW, "Я ищу работу", "WorkNOWInfo");
+            CreateInput(WorkNOW, "Я ищу работу", "WorkNOWInfo");
         }
 
         private bool WorkNOWInfoCondition()
@@ -98,8 +98,8 @@ namespace CodeBase.Dialogs
             void Action()
             {
                 ClearInputs();
-                CreateStartSpeechButton(WorkNOW_WannaFoolMe, "Я должен дергать репу? Ты, должно быть, шутишь!", "WorkNOW");
-                CreateStartSpeechButton(WorkNOW_Ok, "Хорошо...", "WorkNOW");
+                CreateInput(WorkNOW_WannaFoolMe, "Я должен дергать репу? Ты, должно быть, шутишь!", "WorkNOW");
+                CreateInput(WorkNOW_Ok, "Хорошо...", "WorkNOW");
             }
 
             Play(Action);
@@ -146,7 +146,7 @@ namespace CodeBase.Dialogs
             if (RuebenRunningCondition() == false)
                 return;
 
-            CreateStartSpeechButton(RuebenRunning, "Вот твоя репа", "RuebenRunningInfo");
+            CreateInput(RuebenRunning, "Вот твоя репа", "RuebenRunningInfo");
         }
 
         private bool RuebenRunningCondition()
@@ -188,7 +188,7 @@ namespace CodeBase.Dialogs
             if (MoreWorkCondition() == false)
                 return;
 
-            CreateStartSpeechButton(MoreWork, "У тебя есть еще какая-нибудь работа для меня?", "MoreWorkInfo");
+            CreateInput(MoreWork, "У тебя есть еще какая-нибудь работа для меня?", "MoreWorkInfo");
         }
 
         private bool MoreWorkCondition()

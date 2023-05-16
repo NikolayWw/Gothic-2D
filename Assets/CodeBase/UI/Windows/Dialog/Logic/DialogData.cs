@@ -1,20 +1,22 @@
-﻿using CodeBase.StaticData.Dialog;
-using System;
-using System.Collections.Generic;
-
-namespace CodeBase.UI.Windows.Dialog.Logic
+﻿namespace CodeBase.UI.Windows.Dialog.Logic
 {
     public struct DialogData
     {
-        public List<DialogId> SpeechIds { get; }
-        public Action OnEndPlaySpeech { get; }
+        public bool IsGGFocus { get; }  //Player
         public string NpcName { get; }
+        public string Dialog { get; }
+        public string AudioName { get; }
 
-        public DialogData(string npcName, List<DialogId> speechIds, Action onEndPlaySpeech)
+        /// <summary>
+        /// Gg is a player
+        /// </summary>
+        /// <param name="isGgFocus"></param>
+        public DialogData(bool isGgFocus, string npcName, string dialog, string audioName)
         {
-            SpeechIds = speechIds;
+            IsGGFocus = isGgFocus;
             NpcName = npcName;
-            OnEndPlaySpeech = onEndPlaySpeech;
+            Dialog = dialog;
+            AudioName = audioName;
         }
     }
 }

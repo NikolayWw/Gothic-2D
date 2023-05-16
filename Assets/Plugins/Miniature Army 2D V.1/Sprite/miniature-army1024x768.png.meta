@@ -453,7 +453,7 @@ TextureImporter:
       213: 21300298
     second: helmet-black
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -473,6 +473,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -504,13 +506,53 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
@@ -3684,6 +3726,157 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      arrow: 21300128
+      axe: 21300230
+      bow: 21300226
+      bukler: 21300264
+      chain-hood: 21300268
+      dagger: 21300266
+      hat-black: 21300284
+      hat-blue: 21300274
+      hat-green: 21300276
+      hat-orange: 21300278
+      hat-red: 21300272
+      hat-white: 21300282
+      hat-yellow: 21300280
+      head-dark: 21300094
+      head-deep: 21300092
+      head-light-pink: 21300088
+      head-light-yellow: 21300086
+      head-medium: 21300090
+      helmet-black: 21300298
+      helmet-blue: 21300288
+      helmet-green: 21300290
+      helmet-orange: 21300292
+      helmet-red: 21300286
+      helmet-white: 21300296
+      helmet-yellow: 21300294
+      hood: 21300270
+      katana: 21300130
+      knight-back-arm: 21300044
+      knight-body-black: 21300040
+      knight-body-blue: 21300030
+      knight-body-green: 21300032
+      knight-body-orange: 21300034
+      knight-body-red: 21300028
+      knight-body-white: 21300038
+      knight-body-yellow: 21300036
+      knight-front-arm1: 21300000
+      knight-front-arm2: 21300002
+      knight-leg1: 21300046
+      knight-leg2: 21300048
+      mace: 21300168
+      merchant-back-arm-black: 21300244
+      merchant-back-arm-blue: 21300066
+      merchant-back-arm-green: 21300108
+      merchant-back-arm-orange: 21300148
+      merchant-back-arm-red: 21300022
+      merchant-back-arm-white: 21300206
+      merchant-back-arm-yellow: 21300188
+      merchant-body-black: 21300262
+      merchant-body-blue: 21300252
+      merchant-body-green: 21300254
+      merchant-body-orange: 21300256
+      merchant-body-red: 21300250
+      merchant-body-white: 21300260
+      merchant-body-yellow: 21300258
+      merchant-front-arm1-black: 21300246
+      merchant-front-arm1-blue: 21300068
+      merchant-front-arm1-green: 21300110
+      merchant-front-arm1-orange: 21300150
+      merchant-front-arm1-red: 21300024
+      merchant-front-arm1-white: 21300208
+      merchant-front-arm1-yellow: 21300190
+      merchant-front-arm2-black: 21300248
+      merchant-front-arm2-blue: 21300070
+      merchant-front-arm2-green: 21300112
+      merchant-front-arm2-orange: 21300152
+      merchant-front-arm2-red: 21300026
+      merchant-front-arm2-white: 21300210
+      merchant-front-arm2-yellow: 21300192
+      peasant-back-arm-black: 21300232
+      peasant-back-arm-blue: 21300054
+      peasant-back-arm-green: 21300096
+      peasant-back-arm-orange: 21300136
+      peasant-back-arm-red: 21300010
+      peasant-back-arm-white: 21300194
+      peasant-back-arm-yellow: 21300176
+      peasant-body-black: 21300224
+      peasant-body-blue: 21300214
+      peasant-body-green: 21300216
+      peasant-body-orange: 21300218
+      peasant-body-red: 21300212
+      peasant-body-white: 21300222
+      peasant-body-yellow: 21300220
+      peasant-front-arm1-black: 21300234
+      peasant-front-arm1-blue: 21300056
+      peasant-front-arm1-green: 21300098
+      peasant-front-arm1-orange: 21300138
+      peasant-front-arm1-red: 21300012
+      peasant-front-arm1-white: 21300196
+      peasant-front-arm1-yellow: 21300178
+      peasant-front-arm2-black: 21300236
+      peasant-front-arm2-blue: 21300058
+      peasant-front-arm2-green: 21300100
+      peasant-front-arm2-orange: 21300140
+      peasant-front-arm2-red: 21300014
+      peasant-front-arm2-white: 21300198
+      peasant-front-arm2-yellow: 21300180
+      peasant-leg1: 21300050
+      peasant-leg2: 21300052
+      polearm: 21300132
+      priest-back-arm-black: 21300238
+      priest-back-arm-blue: 21300060
+      priest-back-arm-green: 21300102
+      priest-back-arm-orange: 21300142
+      priest-back-arm-red: 21300016
+      priest-back-arm-white: 21300200
+      priest-back-arm-yellow: 21300182
+      priest-body-black: 21300166
+      priest-body-blue: 21300156
+      priest-body-green: 21300158
+      priest-body-orange: 21300160
+      priest-body-red: 21300154
+      priest-body-white: 21300164
+      priest-body-yellow: 21300162
+      priest-feet: 21300042
+      priest-front-arm1-black: 21300240
+      priest-front-arm1-blue: 21300062
+      priest-front-arm1-green: 21300104
+      priest-front-arm1-orange: 21300144
+      priest-front-arm1-red: 21300018
+      priest-front-arm1-white: 21300202
+      priest-front-arm1-yellow: 21300184
+      priest-front-arm2-black: 21300242
+      priest-front-arm2-blue: 21300064
+      priest-front-arm2-green: 21300106
+      priest-front-arm2-orange: 21300146
+      priest-front-arm2-red: 21300020
+      priest-front-arm2-white: 21300204
+      priest-front-arm2-yellow: 21300186
+      rod: 21300170
+      shield: 21300228
+      soldier-back-arm: 21300004
+      soldier-body-black: 21300084
+      soldier-body-blue: 21300074
+      soldier-body-green: 21300076
+      soldier-body-orange: 21300078
+      soldier-body-red: 21300072
+      soldier-body-white: 21300082
+      soldier-body-yellow: 21300080
+      soldier-front-arm1: 21300006
+      soldier-front-arm2: 21300008
+      spear: 21300134
+      staff: 21300172
+      sword: 21300174
+      thief-body-black: 21300126
+      thief-body-blue: 21300116
+      thief-body-green: 21300118
+      thief-body-orange: 21300120
+      thief-body-red: 21300114
+      thief-body-white: 21300124
+      thief-body-yellow: 21300122
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

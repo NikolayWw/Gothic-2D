@@ -23,14 +23,3 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   <DialogueTimeWithoutSound>k__BackingField: 1.5
-  <SpeechConfigs>k__BackingField:
-  - _inspectorName: LogartPro
-    <SpeechId>k__BackingField: 1
-    <IsGGTalking>k__BackingField: 0
-    <Context>k__BackingField: 
-    <Audio>k__BackingField: {fileID: 0}
-  - _inspectorName: LogartPro
-    <SpeechId>k__BackingField: 1
-    <IsGGTalking>k__BackingField: 0
-    <Context>k__BackingField: 
-    <Audio>k__BackingField: {fileID: 0}

@@ -55,8 +55,7 @@ namespace CodeBase.UI.Windows.Ads
 
         private void RefreshAvailableAd()
         {
-            bool ready = _adsReady && _adsService.IsRewardedVideoReady;
-            _showAdsButton.interactable = ready;
+            _showAdsButton.interactable = _adsReady;
         }
 
         private void OnShowAdClicked()
