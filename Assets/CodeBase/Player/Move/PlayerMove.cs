@@ -23,23 +23,10 @@ namespace CodeBase.Player.Move
         {
             _inputService = inputService;
             _playerCheckDead.Happened += Pause;
-
-            Debug.Log("Construct Test");
         }
-
-        #region Test 1/2
-        private bool _toggleTest;
-        #endregion
 
         private void FixedUpdate()
         {
-            #region Test 2/2
-            if (_toggleTest == false)
-            {
-                _toggleTest = true;
-                Debug.Log("Fix Test");
-            }
-            #endregion
             Move(_inputService.MoveAxis);
         }
 

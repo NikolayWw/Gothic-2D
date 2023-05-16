@@ -183,7 +183,7 @@ TextureImporter:
       213: -4877550082126631157
     second: RubySheet_23
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -203,8 +203,6 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -236,14 +234,10 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
   applyGammaDecoding: 1
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -281,18 +275,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 1024
-    resizeAlgorithm: 1
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 100
-    crunchedCompression: 1
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -810,31 +792,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      RubySheet_0: 1179689532383277787
-      RubySheet_1: 1131449469214495470
-      RubySheet_10: 3448265432669026736
-      RubySheet_11: -7565517988795335449
-      RubySheet_12: -1933501097646048260
-      RubySheet_13: -769858145841929878
-      RubySheet_14: 1539843085731832510
-      RubySheet_15: -4501641280254417949
-      RubySheet_16: 8460782215252337887
-      RubySheet_17: 8246278663992494505
-      RubySheet_18: 8070482376182931773
-      RubySheet_19: -224533755054546601
-      RubySheet_2: -8851462101562766852
-      RubySheet_20: 3538487966940880493
-      RubySheet_21: -8958994112413922585
-      RubySheet_22: 1360649686035638202
-      RubySheet_23: -4877550082126631157
-      RubySheet_3: 2528732055837445801
-      RubySheet_4: 6230984419942905211
-      RubySheet_5: -1901461187026571299
-      RubySheet_6: -353665752698598602
-      RubySheet_7: 6822840575877441529
-      RubySheet_8: -2863869127904342547
-      RubySheet_9: 4068846898547224552
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -4,7 +4,7 @@ using UnityEngine.Advertisements;
 
 namespace CodeBase.Services.Ads
 {
-    public class AdsService : IAdsService, IUnityAdsInitializationListener
+    public class AdsService : IAdsService, IUnityAdsListener
     {
         private const string AndroidGameId = "5264490";
         private const string IOSGameId = "5264491";
@@ -12,6 +12,7 @@ namespace CodeBase.Services.Ads
         private const string RewardedPlacementIdAndroid = "Rewarded_Android";
         private const string RewardedPlacementIdIOS = "Rewarded_iOS";
 
+        public bool IsRewardedVideoReady => Advertisement.IsReady(_placementI);
         public Action RewardedVideoReady { get; set; }
 
         private Action _onVideoFinished;
@@ -41,7 +42,9 @@ namespace CodeBase.Services.Ads
                     Debug.Log("Unsupported platform for ads");
                     break;
             }
-            Advertisement.Initialize(_gameId, true, this);
+
+            Advertisement.AddListener(this);
+            Advertisement.Initialize(_gameId);
         }
 
         public void ShowRewardedVideo(Action onVideoFinished)
@@ -80,10 +83,10 @@ namespace CodeBase.Services.Ads
             _onVideoFinished = null;
         }
 
-        public void OnInitializationComplete()
+        public void OnUnityAdsDidError(string message)
         { }
 
-        public void OnInitializationFailed(UnityAdsInitializationError error, string message)
+        public void OnUnityAdsDidStart(string placementId)
         { }
     }
 }
