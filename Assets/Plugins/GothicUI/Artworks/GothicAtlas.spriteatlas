@@ -52,5 +52,5 @@ SpriteAtlas:
   - Button_medium2
   - Inventory_bar
   - DescriptionBar
-  m_Tag: ButtonsAtlas
+  m_Tag: GothicAtlas
   m_IsVariant: 0
