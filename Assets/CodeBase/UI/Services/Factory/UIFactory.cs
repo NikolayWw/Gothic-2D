@@ -24,7 +24,6 @@ using CodeBase.UI.Windows.LoadSaveMenu;
 using CodeBase.UI.Windows.MainMenu;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CodeBase.Services.Ads;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -41,12 +40,11 @@ namespace CodeBase.UI.Services.Factory
         private readonly IGameFactory _gameFactory;
         private readonly ISaveLoadService _saveLoadService;
         private readonly IGameStateMachine _gameStateMachine;
-        private readonly IAdsService _adsService;
 
         private Transform _uiRoot;
         public Dictionary<WindowId, BaseWindow> WindowsContainer { get; } = new Dictionary<WindowId, BaseWindow>();
 
-        public UIFactory(IAssetProvider assetProvider, IStaticDataService staticDataService, IPersistentProgressService persistentProgressService, ILogicFactoryService logicFactory, IGameFactory gameFactory, ISaveLoadService saveLoadService, IGameStateMachine gameStateMachine,IAdsService adsService)
+        public UIFactory(IAssetProvider assetProvider, IStaticDataService staticDataService, IPersistentProgressService persistentProgressService, ILogicFactoryService logicFactory, IGameFactory gameFactory, ISaveLoadService saveLoadService, IGameStateMachine gameStateMachine)
         {
             _assetProvider = assetProvider;
             _staticDataService = staticDataService;
@@ -55,7 +53,6 @@ namespace CodeBase.UI.Services.Factory
             _gameFactory = gameFactory;
             _saveLoadService = saveLoadService;
             _gameStateMachine = gameStateMachine;
-            _adsService = adsService;
         }
 
         public void Clean()
@@ -189,7 +186,7 @@ namespace CodeBase.UI.Services.Factory
         public async Task CreateAdsWindow()
         {
             RewardedAddMoneyWindow rewardedAddMoney = await InstantiateRegister<RewardedAddMoneyWindow>(WindowId.Ads);
-            rewardedAddMoney.Construct(_staticDataService, _adsService, _logicFactory, _persistentProgressService);
+            rewardedAddMoney.Construct(_staticDataService, _logicFactory, _persistentProgressService);
         }
 
         public async Task CreateMainMenu(IWindowService windowService)

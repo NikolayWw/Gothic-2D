@@ -30,7 +30,7 @@ TextureImporter:
       213: 8928097699067777432
     second: FloorWaterRoundCorners_8
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -47,9 +47,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -81,10 +84,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -324,9 +332,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      FloorWaterRoundCorners_0: 8160936719798313024
+      FloorWaterRoundCorners_1: -1461658588064603524
+      FloorWaterRoundCorners_2: -187217663852998986
+      FloorWaterRoundCorners_3: -216212205376463626
+      FloorWaterRoundCorners_4: 5390282840649996488
+      FloorWaterRoundCorners_5: 1764941518268613943
+      FloorWaterRoundCorners_6: 409711093647374902
+      FloorWaterRoundCorners_7: -848561354300285403
+      FloorWaterRoundCorners_8: 8928097699067777432
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

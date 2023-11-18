@@ -45,6 +45,9 @@ namespace CodeBase.Player.Move
 
         private void UpdateLookDirection()
         {
+            if (_inputService == null)
+                return;
+
             LookDirection =
                 _inputService.MoveAxis.y > 0 ? Vector2.up :
                 _inputService.MoveAxis.y < 0 ? Vector2.down :
@@ -55,6 +58,9 @@ namespace CodeBase.Player.Move
 
         private void UpdateFlip()
         {
+            if(_inputService==null)
+                return;
+
             var scale = transform.localScale;
             scale.x =
                 _inputService.MoveAxis.x > 0 ? -_xScale :

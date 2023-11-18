@@ -32,13 +32,17 @@ namespace CodeBase.Logic.Move
 
         private void UpdateMoving()
         {
-            _animator.SetBool(MoveHash, _lookDirection.IsMoving());
+            if (_lookDirection != null)
+                _animator.SetBool(MoveHash, _lookDirection.IsMoving());
         }
 
         private void UpdateLookDirection()
         {
-            _animator.SetFloat(XLookHash, _lookDirection.LookDirection.x);
-            _animator.SetFloat(YLookHash, _lookDirection.LookDirection.y);
+            if (_lookDirection != null)
+            {
+                _animator.SetFloat(XLookHash, _lookDirection.LookDirection.x);
+                _animator.SetFloat(YLookHash, _lookDirection.LookDirection.y);
+            }
         }
 
         public void PlayAttack()

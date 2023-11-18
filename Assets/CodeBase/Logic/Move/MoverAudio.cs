@@ -37,6 +37,9 @@ namespace CodeBase.Logic.Move
 
         private void UpdateAudio()
         {
+            if(_lookDirection==null)
+                return;
+
             if (_lookDirection.IsMoving())
             {
                 if (_moveAudioSource.isPlaying == false)

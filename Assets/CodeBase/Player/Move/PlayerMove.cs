@@ -27,7 +27,8 @@ namespace CodeBase.Player.Move
 
         private void FixedUpdate()
         {
-            Move(_inputService.MoveAxis);
+            if (_inputService != null)
+                Move(_inputService.MoveAxis);
         }
 
         public void UpdateProgress(PlayerProgress progress)

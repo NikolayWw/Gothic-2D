@@ -1,6 +1,5 @@
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Services;
-using CodeBase.Services.Ads;
 using CodeBase.Services.GameFactory;
 using CodeBase.Services.Input;
 using CodeBase.Services.LogicFactory;
@@ -60,17 +59,14 @@ namespace CodeBase.Infrastructure.States
                 _services.Single<ILogicFactoryService>(),
                 _services.Single<IGameFactory>(),
                 _services.Single<ISaveLoadService>(),
-                _stateMachine,
-                _services.Single<IAdsService>()));
+                _stateMachine));
 
             _services.RegisterSingle<IWindowService>(new WindowService(_services.Single<IUIFactory>()));
         }
 
         private void RegisterAds()
         {
-            var adsService = new AdsService();
-            adsService.Initialize();
-            _services.RegisterSingle<IAdsService>(adsService);
+          
         }
 
         private void RegisterAssetProvider()

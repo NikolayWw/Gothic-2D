@@ -109,7 +109,7 @@ namespace CodeBase.Infrastructure.States
             await _windowService.Open(WindowId.OpenCharacteristicsButton);
             await _windowService.Open(WindowId.GameplayMessage);
             await _windowService.Open(WindowId.OpenGameMenuButton);
-            await _windowService.Open(WindowId.Ads);
+           // await _windowService.Open(WindowId.Ads);
         }
 
         private void InformLoadProgress()

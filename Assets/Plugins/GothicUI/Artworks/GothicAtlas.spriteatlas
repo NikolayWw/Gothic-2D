@@ -28,6 +28,8 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 7276a353569a55b4ea8adb99ef279c9d, type: 3}
@@ -37,6 +39,15 @@ SpriteAtlas:
     - {fileID: 2800000, guid: e1de668a9d1fd084dba65fd48d280bbb, type: 3}
     - {fileID: 2800000, guid: 9741b07ade49d8c41a7dc74328535538, type: 3}
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 7276a353569a55b4ea8adb99ef279c9d: 21300000
+    - 9741b07ade49d8c41a7dc74328535538: 21300000
+    - e1de668a9d1fd084dba65fd48d280bbb: 21300000
+    - b9c082bba269ec947865b95c0a5bbf5b: 21300000
+    - 37700bfc11ce1fd4a9c4db90532eae2b: 21300000
+    - 696660cf962844f41bcc928e09c73b79: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 7276a353569a55b4ea8adb99ef279c9d, type: 3}
@@ -52,5 +63,6 @@ SpriteAtlas:
   - Button_medium2
   - Inventory_bar
   - DescriptionBar
+  m_RenderDataMap: {}
   m_Tag: GothicAtlas
   m_IsVariant: 0
